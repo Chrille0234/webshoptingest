@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+@import url(css/primarynav.css);
+@import url(css/siteheader.css);
+@import url(css/sitefooter.css);
+@import url(css/purchasepage/productContainer.css);
+
+
+
+*{
+    font-family: 'roboto', sans-serif;
+}
+body{
+    margin: 0;
+}
+h1, h2, h3{
+    font-family: 'source sans pro', sans-serif;
+}

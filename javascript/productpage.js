@@ -56,8 +56,28 @@ const products = [
     
 ]
 
+// jeg henter item nummeret i url'en, og laver den om til et tal så jeg kan hente et specifikt produkt i blocken
 var url = new URL(window.location.href)
-var item = url.searchParams.get("item")
+var item = parseInt(url.searchParams.get("item"))
+console.log(item);
 
-item = parseInt(item)
-console.log(parseInt(item));
+// Sætter det rigtige billede
+var image = document.getElementById("display")
+image.src = products[item].URL
+
+// sætter titlen 
+var title = document.getElementById("itemName")
+title.innerText = products[item].title
+
+// sætter prisen
+var price = document.getElementById("itemPrice")
+price.innerText = products[item].price + " kr."
+
+// kurv ting
+var cartButton = document.getElementById("addToCart")
+var cartArr = JSON.parse(localStorage.getItem("cart")) || []
+var isInCart = false
+cartButton.addEventListener("click", function(){
+    if 
+})
+

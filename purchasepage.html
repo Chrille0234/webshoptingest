@@ -4,12 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="purchasepagestyle.css">
 </head>
-<body>
-    <img src="https://via.placeholder.com/300x300" alt="">
+<body style="min-height: 100vh; position: relative;">
+    <header class="siteHeader">
+        <p class="siteHeader__logo">Liptum</p>
+        <nav class="primaryNav">
+            <span class="material-symbols-outlined burger" id="primaryNav__toggle">
+                menu
+            </span>
+            <ul id="primaryMenu__ul">
+                <li><a href="#">Alle produkter</a></li>
+                <li><a href="#">placeholder</a></li>
+                <li><a href="#">placeholder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="siteMain">
+        <section class="productContainer">
+            <div class="productContainer__images">
+                <img src="https://via.placeholder.com/300x300" alt="product" id="display">
+                <div class="productContainer__preview">
+                    <img src="https://via.placeholder.com/300x300" alt="">
+                    <img src="https://via.placeholder.com/300x300" alt="">
+                    <img src="https://via.placeholder.com/300x300" alt="">
+                    <img src="https://via.placeholder.com/300x300" alt="">
+                </div>
+            </div>
+            <div>
+                <h2 id="itemName" class="productContainer__title"></h2>
+                <p class="productContainer__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam hic eos ipsam, dicta odio explicabo sint libero cumque temporibus harum dolorem, commodi nam unde mollitia corrupti quibusdam labore sit assumenda aut excepturi blanditiis! Accusantium consequuntur ducimus ipsum hic maiores velit, harum amet perferendis neque quasi minus est quisquam fugiat inventore.</p>
+                <div>
+                    <span class="productContainer__price" id="itemPrice"></span>
+                    <button class="productContainer__buyButton" id="addToCart">Sæt i kurv</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
-    <script src="javascript/productpage.js" type="module"></script>
+    <footer class="siteFooter">
+        <div>
+            <h3>Kontakt</h3>
+            <p>+45 1234 5678</p>
+            <p>email@domæne.dk</p>
+        </div>
+        <div>
+            <h3>Addresse og CVR</h3>
+            <p>Addresse, 2540</p>
+            <p>CVR: 17237977</p>
+        </div>
+        <div>
+            <form action="" class="siteFooter__form">
+                <h3>Tilmeld nyhedsbrev</h3>
+                <label class="siteFooter_formLabel">email<input type="email" class="siteFooter_formInput"></label>
+                <button class="siteFooter__formSubmit">Tilmeld</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="javascript/productpage.js"></script>
 </body>
 </html>

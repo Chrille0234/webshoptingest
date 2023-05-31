@@ -1,0 +1,22 @@
+.siteFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    padding: 15px;
+
+    background-color: rgba(37, 37, 37, 0.71);
+    color: whitesmoke;
+}
+.siteFooter_formLabel{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 768px){
+    .siteFooter__formSubmit{
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+}

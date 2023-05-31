@@ -1,0 +1,23 @@
+.productCard{
+    width: 200px;
+    color: black;
+    text-decoration: none;
+    border: black 1px solid;
+    border-radius: 2px;
+    background-color: rgba(125, 146, 210, 0.26);
+    padding: 1rem;
+}
+.productCard > *{
+    margin: 5px auto;
+}
+.productCard p{
+    font-size: 1.5rem;
+}
+.productCard h3{
+    font-size: 1.3rem
+}
+.productCard img{
+    display: block;
+    height: 250px;
+    aspect-ratio: 2/3;
+}

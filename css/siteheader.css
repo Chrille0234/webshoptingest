@@ -1,0 +1,37 @@
+.siteHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.siteHeader__logo{
+    margin: 0;
+    padding: 0; 
+    font-family: 'source sans pro', sans-serif;
+    font-size: 2.5rem;
+}
+.material-symbols-outlined.burger{
+    display: none
+}
+.nav__toggled{
+    display: flex;
+}
+
+@media screen and (max-width: 768px){
+    .material-symbols-outlined.burger{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px
+    }
+    .siteHeader{
+        align-items: start;
+    }
+    .primaryNav ul{
+        display: none;
+        flex-direction: column;
+        background-color: gray;
+        padding: 1.2rem;
+        margin-top: 50px;
+        font-size: 1.4rem;
+    }
+}

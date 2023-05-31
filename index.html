@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipsum</title>
+
+    <!-- intern css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ekstern css -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <header class="siteHeader">
+        <p class="siteHeader__logo">Liptum</p>
+        <nav class="primaryNav">
+            <span class="material-symbols-outlined burger" id="primaryNav__toggle">
+                menu
+            </span>
+            <ul id="primaryMenu__ul">
+                <li><a href="#">Alle produkter</a></li>
+                <li><a href="#">placeholder</a></li>
+                <li><a href="#">placeholder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="siteMain">
+        <section class="newProduct">
+            <div class="newProduct__text">
+                <h1>Nyt produkt navn</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere totam eum quas, at quaerat excepturi, dolorum non ut animi aspernatur deleniti iure est accusantium corporis dignissimos, molestiae voluptas nostrum cupiditate dolorem fugit natus. Optio, assumenda voluptates soluta, natus nulla aliquam, nobis sit ipsam cupiditate aperiam repudiandae qui quod! Reprehenderit, labore?</p>
+            </div>
+                <img src="https://via.placeholder.com/300x300" alt="empty placeholder image">
+        </section>
+
+        <section id="test">
+            <h2>Other products</h2>
+            <div class="container">
+            <article class="otherProductsContainer">
+
+            </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="siteFooter">
+        <div>
+            <h3>Kontakt</h3>
+            <p>+45 1234 5678</p>
+            <p>email@domæne.dk</p>
+        </div>
+        <div>
+            <h3>Addresse og CVR</h3>
+            <p>Addresse, 2540</p>
+            <p>CVR: 17237977</p>
+        </div>
+        <div>
+            <form action="" class="siteFooter__form">
+                <h3>Tilmeld nyhedsbrev</h3>
+                <label class="siteFooter_formLabel">email<input type="email" class="siteFooter_formInput"></label>
+                <button class="siteFooter__formSubmit">Tilmeld</button>
+            </form>
+        </div>
+    </footer>
+
+
+    <script src="javascript/primaryNav.js"></script>
+    <script src="javascript/productsArray.js" type="module"></script>
+
+</body>
+</html>

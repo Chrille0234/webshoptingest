@@ -3,11 +3,14 @@
 
 @import url(css/primarynav.css);
 @import url(css/productcard.css);
-@import url(css/siteheader.css);
 @import url(css/newProduct.css);
 @import url(css/otherproducts.css);
+@import url(css/primarynav.css);
+@import url(css/siteheader.css);
 @import url(css/sitefooter.css);
-
+@import url(css/purchasepage/productContainer.css);
+@import url(css/shoppingcart/cartitemenu.css);
+@import url(css/shoppingcart/shoppingcart.css);
 *{
     font-family: 'roboto', sans-serif;
 }

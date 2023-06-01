@@ -52,10 +52,23 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-.productContainer__buyButton:hover{
-
-}
 .productContainer__buyButton:active{
     transform: scale(0.95);
 
 }
+
+@media screen and (max-width: 1200px){
+    .productContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 800px){
+    .productContainer__images > img{
+        width: 400px;
+    }
+    .productContainer__info{
+        width: 400px;
+    }
+}
+    

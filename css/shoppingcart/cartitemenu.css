@@ -1,0 +1,18 @@
+.cartItem{
+    display: flex;
+    justify-content: center;
+}
+.cartItem img{
+    width: 50px;
+    aspect-ratio: 1;
+}
+
+/* sørger for at alt står lige i menuen*/
+/* teksten til venstre i kurven. Skubber billedet helt ud til venstre side*/
+.asd{
+    margin-left: auto;
+}
+/* teksten til højre i kurven. Skubber knappen ud til højre side */
+.zxc{
+    margin-right: auto;
+}

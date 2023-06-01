@@ -7,7 +7,7 @@
     <title>Lipsum</title>
 
     <!-- intern css -->
-    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- ekstern css -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -15,17 +15,23 @@
 </head>
 <body>
     <header class="siteHeader">
-        <p class="siteHeader__logo">Liptum</p>
+        <a href="index.html" class="siteHeader__logo">Liptum</a>
         <nav class="primaryNav">
             <span class="material-symbols-outlined burger" id="primaryNav__toggle">
                 menu
             </span>
-            <ul id="primaryMenu__ul">
+            <ul id="primaryMenu__ul" style="user-select: none;">
                 <li><a href="#">Alle produkter</a></li>
                 <li><a href="#">placeholder</a></li>
-                <li><a href="#">placeholder</a></li>
+                <li id="cart">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </li>
             </ul>
         </nav>
+
+        <article class="shoppingCart" id="shoppingCart">
+            
+        </article>
     </header>
 
     <main class="siteMain">

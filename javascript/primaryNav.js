@@ -2,10 +2,10 @@ const button = document.getElementById("primaryNav__toggle")
 const menu = document.getElementById("primaryMenu__ul")
 
 
-var toggled = false // used to keep track of if menu has display flex
+var toggled = false // Holder styr på om menuen er åben eller lukket
 button.addEventListener("click", () => {
-    // if not toggled, give display flex, if toggled, give display none
+    // Hvis den er lukket, så vis den, hvis den er åben, så skjul den
     toggled == false ? menu.style.display = "flex" : menu.style.display = "none"
-    // if not toggled, set toggle to true, if it is toggled, set it to false
+    // Skift toggled til det modsatte af hvad den var før
     toggled == false ? toggled = true : toggled = false
 })

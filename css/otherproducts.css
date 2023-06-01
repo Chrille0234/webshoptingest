@@ -1,11 +1,11 @@
 .otherProductsContainer{
     display: flex;
-    flex-direction: row;
     gap: 1em;
     overflow-x: scroll;
     overflow-y:visible;
     margin: 5px;
 }
+
 
 .content .otherProductsContainer {
     display: inline-block;
@@ -16,3 +16,13 @@
    .content .otherProductsContainer:active{
     cursor: grabbing;
   }
+
+@media screen and (max-width: 678px){
+    .otherProductsContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .otherProductsContainer > *{
+        width: 80%;
+    }
+}

@@ -1,0 +1,7 @@
+.allProductsContainer{
+    overflow: scroll;
+}
+.products{
+    display: flex;
+    gap: 5px;
+}

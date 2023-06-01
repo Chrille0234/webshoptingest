@@ -1,4 +1,5 @@
-const products = [
+// 1 fordi at hvis jeg kalder den products, kommer der en fejl frem fordi jeg har linket en anden JS fil med et til variabel der hedder det
+const products1 = [
     {
         URL: "https://images.unsplash.com/photo-1557180295-76eee20ae8aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80",
         color: "yellow",
@@ -97,75 +98,23 @@ const products = [
     }
 ]
 
-// jeg henter item nummeret i url'en, og laver den om til et tal så jeg kan hente et specifikt produkt i blocken
-var url = new URL(window.location.href)
-var item = parseInt(url.searchParams.get("item"))
-console.log(item);
-
-// Sætter det rigtige billede
-var image = document.getElementById("display")
-image.src = products[item].URL
-
-// sætter titlen 
-var title = document.getElementById("itemName")
-title.innerText = products[item].title
-
-// sætter prisen
-var price = document.getElementById("itemPrice")
-price.innerText = products[item].price + " kr."
-
-var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-var addToCartButton = document.getElementById("addToCart");
-addToCartButton.addEventListener("click", addToCart);
-
-function addToCart() {
-  cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-  if (!cartItems.includes(item)) {
-    cartItems.push(item);
-
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  } else {
-    addToCartButton.innerText = "Produkt er allerede i kurven"
-  }
-  console.log(cartItems);
-
+function addProductCard(wheretoplace, url, color, title, price, itemnumber){
+    const container = document.querySelector(`.${wheretoplace}`)
+    const section = `
+    <a class="productCard" href="./purchasepage.html?item=${itemnumber}" draggable="false">
+    <img class="productCard__image" src="${url}" alt="placeholder image" draggable="false">
+    <h3 class="productCard__title productCard__text color-${color}">${title}</h3>
+    <p class="productCard__price productCard__text">${price} kr.</p>
+    </a>`
+    container.innerHTML += section
 }
-
-// viser kurven
-function displayCart() {
-    cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    var cart = document.getElementById("shoppingCart");
-    var cartItemsHTML = "";
-    for (let i = 0; i < cartItems.length; i++) {
-        cartItemsHTML += `
-        <div class="cartItem">
-        <img src="${products[cartItems[i]].URL}" alt="${products[cartItems[i]].title}">
-        <h3 class="asd">${products[cartItems[i]].title}</h3>
-        <h3 class="zxc">${products[cartItems[i]].price} kr.</h3>
-        <button class="removeItem" onclick="removeItem(${i})">Fjern</button>
-        </div>
-        `;
+var runonce = false
+products1.forEach((product, itemNumber)=>{
+    addProductCard("allproducts", product.URL, product.color, product.title, product.price, itemNumber) 
+    if(product.price <= 400){
+        addProductCard("under500", product.URL, product.color, product.title, product.price, itemNumber) 
     }
-    cart.innerHTML = cartItemsHTML;
+    if(product.color == "yellow"){
+        addProductCard("yellow", product.URL, product.color, product.title, product.price, itemNumber) 
     }
-// fjerner et item fra kurven
-function removeItem(i) {   
-    cartItems.splice(i, 1);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    displayCart();
-    }
-    
-document.getElementById("cart").addEventListener("click", function() {
-    displayCart()
-});
-
-//skjuler kurven hvis man klikker på den igen
-document.getElementById("cart").addEventListener("click", function() {
-    var cart = document.getElementById("shoppingCart");
-    if (cart.style.display === "block") {
-        cart.style.display = "none";
-    } else {
-        cart.style.display = "block";
-    }
-    
-}   );
+})

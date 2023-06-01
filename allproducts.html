@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
-<body style="min-height: 100vh; position: relative;">
+<body style="min-height: 100vh; position: relative; margin-inline: 5px">
     <header class="siteHeader">
         <a href="index.html" class="siteHeader__logo">Liptum</a>
         <nav class="primaryNav">
@@ -17,7 +17,7 @@
                 menu
             </span>
             <ul id="primaryMenu__ul" style="user-select: none;">
-                <li><a href="#">Alle produkter</a></li>
+                <li><a href="allproducts.html">Alle produkter</a></li>
                 <li><a href="#">placeholder</a></li>
                 <li id="cart">
                     <span class="material-symbols-outlined">shopping_cart</span>
@@ -34,11 +34,32 @@
         <h1>Alle produkter</h1>
 
         <section>
-            <h2>Under under 400 kr</h2>
-            <div class="under400">
-                
+            <h2>Alle</h2>
+            <div class="allProductsContainer">
+                <div class="products allproducts">
+    
+                </div>
             </div>
         </section>
+
+        <section>
+            <h2>Under 400 kr</h2>
+            <div class="allProductsContainer">
+                <div class="products under500">
+    
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Gult Farvetema</h2>
+            <div class="allProductsContainer">
+                <div class="products yellow">
+    
+                </div>
+            </div>
+        </section>
+
     </main>
 
 
@@ -62,8 +83,8 @@
         </div>
     </footer>
 
+    <script src="javascript/allproducts.js"></script>
     <script src="javascript/productpage.js"></script>
     <script src="javascript/primaryNav.js"></script>
-
 </body>
 </html>

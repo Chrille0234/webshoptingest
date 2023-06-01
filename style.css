@@ -11,11 +11,18 @@
 @import url(css/purchasepage/productContainer.css);
 @import url(css/shoppingcart/cartitemenu.css);
 @import url(css/shoppingcart/shoppingcart.css);
+
+
+/* all products */
+@import url(css/allproducts.css);
 *{
     font-family: 'roboto', sans-serif;
+    color: white
 }
 body{
     margin: 0;
+    background: #0d1b2f;
+    color: white;
 }
 h1, h2, h3{
     font-family: 'source sans pro', sans-serif;

@@ -116,10 +116,12 @@ price.innerText = products[item].price + " kr."
 
 var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 var addToCartButton = document.getElementById("addToCart");
+
 addToCartButton.addEventListener("click", addToCart);
 
 function addToCart() {
   cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  //hvis den ikke er i kurven, så tilføj den til kurven
   if (!cartItems.includes(item)) {
     cartItems.push(item);
 
@@ -127,8 +129,6 @@ function addToCart() {
   } else {
     addToCartButton.innerText = "Produkt er allerede i kurven"
   }
-  console.log(cartItems);
-
 }
 
 // viser kurven
@@ -136,6 +136,7 @@ function displayCart() {
     cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     var cart = document.getElementById("shoppingCart");
     var cartItemsHTML = "";
+    // viser hvert produkt i kurven
     for (let i = 0; i < cartItems.length; i++) {
         cartItemsHTML += `
         <div class="cartItem">

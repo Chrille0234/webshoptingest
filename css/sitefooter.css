@@ -8,6 +8,9 @@
     background-color: rgba(37, 37, 37, 0.71);
     color: whitesmoke;
 }
+.siteFooter_formInput, .siteFooter button{
+    color: black;
+}
 .siteFooter_formLabel{
     display: flex;
     flex-direction: column;

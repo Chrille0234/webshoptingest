@@ -108,15 +108,18 @@ function addProductCard(wheretoplace, url, color, title, price, itemnumber){
     </a>`
     container.innerHTML += section
 }
-var runonce = false
 products1.forEach((product, itemNumber)=>{
+    // sætter alle produkter under kategorien "alle"
     addProductCard("allproducts", product.URL, product.color, product.title, product.price, itemNumber) 
+    // sætter alle produkter under kategorien "under 500"
     if(product.price <= 500){
         addProductCard("under500", product.URL, product.color, product.title, product.price, itemNumber) 
     }
+    // sætter alle produkter under kategorien "over 500"
     if(product.price >= 500){
         addProductCard("over500", product.URL, product.color, product.title, product.price, itemNumber) 
     }
+    // sætter alle produkter under kategorien "Gult Farvetema"
     if(product.color == "yellow"){
         addProductCard("yellow", product.URL, product.color, product.title, product.price, itemNumber) 
     }

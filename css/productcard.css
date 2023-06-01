@@ -1,10 +1,8 @@
 .productCard{
-    width: 200px;
-    color: black;
     text-decoration: none;
     border-radius: 5px;
     background-color: rgba(125, 146, 210, 0.26);
-    padding: 1rem;
+    padding: 0.5rem;
 }
 .productCard > *{
     margin: 5px auto;

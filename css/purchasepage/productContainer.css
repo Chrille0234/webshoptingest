@@ -1,8 +1,6 @@
 .productContainer{
     display: flex;
     justify-content: center;
-
-
     width: 100%;
 }
 .productContainer > * {
@@ -37,7 +35,6 @@
     font-weight: 400;
 }
 .productContainer__buyButton{
-    display: block;
     width: 100%;
     padding: 0.8rem;
     margin: 15px 0;
@@ -53,8 +50,7 @@
     transition: all 0.3s ease-in-out;
 }
 .productContainer__buyButton:active{
-    transform: scale(0.95);
-
+    transform: scale(0.90);
 }
 
 @media screen and (max-width: 1200px){

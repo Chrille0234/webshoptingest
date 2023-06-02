@@ -125,17 +125,11 @@ addToCardButton.addEventListener("click", function(){
         }
     }
     if(productAlreadyInCart){
-        addToCardButton.innerText = "Produkt er allerede i kurv"
+        addToCardButton.innerText = "produkt er allerede i kurven"
     }else{
         cart.push(products[item])
         localStorage.setItem("cart", JSON.stringify(cart))
-        addToCardButton.innerText = "Tilføjet til kurv"
+        addToCardButton.innerText = "tilføjet til kurv"
     }
-    
-    // capslock pga. knappen har en text transform til uppercase
-    if(addToCardButton.innerText == "TILFØJET TIL KURV" || addToCardButton.innerText == "PRODUKT ER ALLEREDE I KURV"){
-        addToCardButton.innerText = "Produkt er allerede i kurv"
-    }else{
-        addToCardButton.innerText = "Tilføjet til kurv"
-    }
+
 })

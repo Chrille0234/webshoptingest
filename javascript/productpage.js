@@ -114,59 +114,13 @@ title.innerText = products[item].title
 var price = document.getElementById("itemPrice")
 price.innerText = products[item].price + " kr."
 
-var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-var addToCartButton = document.getElementById("addToCart");
+var addToCardButton = document.getElementById("addToCart")
+var cart = JSON.parse(localStorage.getItem("cart")) || []
 
-addToCartButton.addEventListener("click", addToCart);
-
-function addToCart() {
-  cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-  //hvis den ikke er i kurven, så tilføj den til kurven
-  if (!cartItems.includes(item)) {
-    cartItems.push(item);
-
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  } else {
-    addToCartButton.innerText = "Produkt er allerede i kurven"
-  }
-}
-
-// viser kurven
-function displayCart() {
-    cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    var cart = document.getElementById("shoppingCart");
-    var cartItemsHTML = "";
-    // viser hvert produkt i kurven
-    for (let i = 0; i < cartItems.length; i++) {
-        cartItemsHTML += `
-        <div class="cartItem">
-        <img src="${products[cartItems[i]].URL}" alt="${products[cartItems[i]].title}">
-        <h3 class="asd">${products[cartItems[i]].title}</h3>
-        <h3 class="zxc">${products[cartItems[i]].price} kr.</h3>
-        <button class="removeItem" onclick="removeItem(${i})">Fjern</button>
-        </div>
-        `;
+addToCardButton.addEventListener("click", function(){
+    if(!cart.includes(products[item])){
+        cart.push(products[item])
+        localStorage.setItem("cart", JSON.stringify(cart))
     }
-    cart.innerHTML = cartItemsHTML;
-    }
-// fjerner et item fra kurven
-function removeItem(i) {   
-    cartItems.splice(i, 1);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    displayCart();
-    }
-    
-document.getElementById("cart").addEventListener("click", function() {
-    displayCart()
-});
-
-//skjuler kurven hvis man klikker på den igen
-document.getElementById("cart").addEventListener("click", function() {
-    var cart = document.getElementById("shoppingCart");
-    if (cart.style.display === "block") {
-        cart.style.display = "none";
-    } else {
-        cart.style.display = "block";
-    }
-    
-}   );
+    console.log(cart);
+})

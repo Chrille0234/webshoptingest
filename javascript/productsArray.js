@@ -111,3 +111,5 @@ products.forEach((product, itemNumber)=>{
     // sætter maks 9 produkter på forsiden
     if(itemNumber < 9) addProductCard("otherProductsContainer", product.URL, product.color, product.title, product.price, itemNumber)
 })
+
+

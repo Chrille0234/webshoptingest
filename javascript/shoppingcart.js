@@ -18,20 +18,24 @@ function addProductsToCart() {
         <section class="cartItem">
             <img src="${product.URL}">
             <h3>${product.title}</h3>
-            <p>Pris: ${product.price}</p>
+            <p>Pris: ${product.price} kr</p>
             <button onClick="removeItem(${number})"> Fjern </button>
         </section>
         `
     })
     totalPrice()
 }
+function removeInnerHTMLFromCart(){
+    var container = document.querySelector(".cartItemsContainer")
+    container.innerHTML = ""
+}
+
 // fjerner et produkt fra kurven
 function removeItem(number) {
     shoppingCart.splice(number, 1)
     localStorage.setItem("cart", JSON.stringify(shoppingCart))
-    var container = document.querySelector(".cartItemsContainer")
-    // fjerner alle produkterne fra kurven, og sætter dem ind igen, men uden den varer der blev slettet
-    container.innerHTML = ""
+
+    removeInnerHTMLFromCart()
     addProductsToCart()
 }
 

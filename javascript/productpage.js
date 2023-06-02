@@ -105,23 +105,33 @@ console.log(item);
 // Sætter det rigtige billede
 var image = document.getElementById("display")
 image.src = products[item].URL
-
 // sætter titlen 
 var title = document.getElementById("itemName")
 title.innerText = products[item].title
-
 // sætter prisen
 var price = document.getElementById("itemPrice")
 price.innerText = products[item].price + " kr."
 
+// kode til kurven
 var addToCardButton = document.getElementById("addToCart")
 var cart = JSON.parse(localStorage.getItem("cart")) || []
 
 addToCardButton.addEventListener("click", function(){
-    if(!cart.includes(products[item])){
+    // gør så man kun kan tilføje det samme produkt en gang
+    var productAlreadyInCart = false
+    for(var i = 0; i < cart.length; i++){
+        if(cart[i].title == products[item].title){
+            productAlreadyInCart = true
+        }
+    }
+    if(productAlreadyInCart){
+        addToCardButton.innerText = "Produkt er allerede i kurv"
+    }else{
         cart.push(products[item])
         localStorage.setItem("cart", JSON.stringify(cart))
+        addToCardButton.innerText = "Tilføjet til kurv"
     }
+    
     // capslock pga. knappen har en text transform til uppercase
     if(addToCardButton.innerText == "TILFØJET TIL KURV" || addToCardButton.innerText == "PRODUKT ER ALLEREDE I KURV"){
         addToCardButton.innerText = "Produkt er allerede i kurv"

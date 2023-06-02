@@ -122,5 +122,10 @@ addToCardButton.addEventListener("click", function(){
         cart.push(products[item])
         localStorage.setItem("cart", JSON.stringify(cart))
     }
-    console.log(cart);
+    // capslock pga. knappen har en text transform til uppercase
+    if(addToCardButton.innerText == "TILFØJET TIL KURV" || addToCardButton.innerText == "PRODUKT ER ALLEREDE I KURV"){
+        addToCardButton.innerText = "Produkt er allerede i kurv"
+    }else{
+        addToCardButton.innerText = "Tilføjet til kurv"
+    }
 })

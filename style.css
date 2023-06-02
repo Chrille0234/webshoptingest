@@ -12,10 +12,9 @@
 @import url(css/shoppingcart/cartitem.css);
 @import url(css/shoppingcart/shoppingcart.css);
 @import url(css/siteMain.css);
-
-
-/* all products */
 @import url(css/allproducts.css);
+@import url(css/shoppingcart/tilbetaling.css);
+
 *{
     font-family: 'roboto', sans-serif;
     color: white

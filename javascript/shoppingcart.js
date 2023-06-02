@@ -18,7 +18,7 @@ function addProductsToCart() {
         <section class="cartItem">
             <img src="${product.URL}">
             <h3>${product.title}</h3>
-            <p>Price: ${product.price}</p>
+            <p>Pris: ${product.price}</p>
             <button onClick="removeItem(${number})"> Fjern </button>
         </section>
         `
